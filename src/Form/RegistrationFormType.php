@@ -96,10 +96,7 @@ class RegistrationFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-            //TODO: à enlever quand le formulaire sera terminé
-            'attr' => [
-                'novalidate' => 'novalidate'
-            ]
+
         ]);
     }
 }
