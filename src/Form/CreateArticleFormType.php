@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Article;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,8 +31,12 @@ class CreateArticleFormType extends AbstractType
                 ]
             ])
 
-            ->add('content', TextareaType::class, [
+            ->add('content', CKEditorType::class, [
                 'label' => 'Article:',
+                'attr' =>[
+                    'class' => 'd-none',
+                ],
+                'purify_html' => true,
                 'constraints' => [
                     New NotBlank([
                         'message' => 'Merci de remplir l\'article'
