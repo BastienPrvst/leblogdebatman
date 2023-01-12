@@ -16,4 +16,8 @@
 ## exclusions persos
 .idea/
 migrations/*.php
+public/images/profils/*
 ###
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###
